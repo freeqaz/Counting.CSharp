@@ -2,3 +2,11 @@ Counting.CSharp
 ===============
 
 A counting app for counting huuuuge amount of data. Designed to process around ~100gb of data and have the data be stored on disk when you run out of memory.
+
+Uses a BPlusTree on the disk for quick bulk insertions (dumping memory) and fast reads (O(log(n))).
+Disk is still /extremely/ slow, so it's preferable to use Virtual Memory when possible.
+Or just more ram! That wasn't the point of this problem though.
+
+The app uses ZeroMQ to handle pushing data around. The app can be distributed, depending on what you want to achieve.
+The architecture is best suited towards expensive transformations (jobs) that then get pushed to the sink in batches.
+Ideally you'd have a good bit of memory too, to avoid swapping to the disk (though we support it!).
