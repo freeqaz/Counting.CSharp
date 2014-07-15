@@ -1,7 +1,7 @@
 Counting.CSharp
 ===============
 
-An app for counting times a word appears in a huuuuge amount of data. Designed to process around ~100gb of data and have the data be stored on disk when you run out of memory.
+An app for counting times a word appears in a huuuuge amounts of data. Designed to process around ~100gb of data and have the data be stored on disk when you run out of memory.
 
 Uses a BPlusTree on the disk for quick bulk insertions (dumping memory) and fast reads (O(log(n))).
 Disk is still /extremely/ slow, so it's preferable to use Virtual Memory when possible.
