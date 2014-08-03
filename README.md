@@ -10,3 +10,5 @@ Or just more ram! That wasn't the point of this problem though.
 The app uses ZeroMQ to handle pushing data around. The app can be distributed, depending on what you want to achieve.
 The architecture is best suited towards expensive transformations (jobs) that then get pushed to the sink in batches.
 Ideally you'd have a good bit of memory too, to avoid swapping to the disk (though we support it!).
+
+:)
